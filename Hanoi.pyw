@@ -16,7 +16,7 @@ root.title('HTS')
 root.resizable(0, 0)
 btn = Button(root, text = 'Ок')
 entry = Entry(root)
-lbl = Label(root, text = 'Введіть кількість дисків (ціле число, менше 10)')
+lbl = Label(root, text = 'Введіть кількість дисків (натуральне число, менше 10)')
 lbl.pack()
 entry.pack()
 btn.pack()
@@ -24,7 +24,7 @@ btn.pack()
 def Try(event = None):
     n = entry.get()
     if not n.isdigit() or int(n) > 9:
-        tkinter.messagebox.showerror("Блін...", "Треба написати ціле число, менше 10")
+        tkinter.messagebox.showerror("Блін...", "Треба написати натуральне число, менше 10")
         return
     global NumberOfDisks
     NumberOfDisks = int(n)
